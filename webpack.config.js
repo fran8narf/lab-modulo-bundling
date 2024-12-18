@@ -1,11 +1,13 @@
 import HtmlWebpackPlugin from "html-webpack-plugin"
-import path from "path"
-import url from "url"
-
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export default {
-  entry: ["./src/index.js"],
+  entry: {
+    app: "./src/index.js"
+  },
+  output: {
+    clean: true,
+    filename: "[name].[hash].js"
+  },
   module: {
     rules: [
       {
@@ -19,12 +21,11 @@ export default {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
-      scriptLoading: "blocking"
+      scriptLoading: "blocking",
+      hash: true
     })
   ],
   devServer: {
-    port: 2244,
-    static: path.join(__dirname, "src"),
-    hot: true
+    port: 2244
   },
 }
