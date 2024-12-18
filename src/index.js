@@ -1,1 +1,4 @@
-console.log('hello webpack 0 config')
+const userName = "Juan Doe";
+const hello = `Hello, ${userName}`;
+
+console.log(hello);
