@@ -2,6 +2,7 @@
   "name": "lab-modulo-bundling",
   "version": "1.0.0",
   "description": "Laboratorio Bundling - Fran Ramírez | Lemoncode",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
