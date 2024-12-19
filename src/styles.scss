@@ -1,4 +1,8 @@
-$bg-color: lightblue;
+$bg-color: lightcyan;
+$title-color: rgb(170, 43, 255);
+$top-bottom-spacing-20: 20px 0px;
+$font-size-L: 4rem;
+
 * {
     padding: 0;
     margin: 0;
@@ -6,4 +10,11 @@ $bg-color: lightblue;
 
 .bg-color {
     background-color: $bg-color;
+}
+
+.greeting {
+    color: $title-color;
+    text-align: center;
+    padding: $top-bottom-spacing-20;
+    font-size: $font-size-L;
 }
