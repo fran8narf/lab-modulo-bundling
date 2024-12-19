@@ -2,6 +2,8 @@ $bg-color: lightcyan;
 $title-color: rgb(170, 43, 255);
 $top-bottom-spacing-20: 20px 0px;
 $font-size-L: 4rem;
+$font-size-M: 2rem;
+$font-size-S: 1rem;
 
 * {
     padding: 0;
@@ -16,5 +18,5 @@ $font-size-L: 4rem;
     color: $title-color;
     text-align: center;
     padding: $top-bottom-spacing-20;
-    font-size: $font-size-L;
+    font-size: $font-size-M;
 }
