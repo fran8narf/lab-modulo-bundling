@@ -7,10 +7,10 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 export default {
   context: path.resolve(__dirname, "src"),
   entry: {
-    app: "./index.ts"
+    app: "./index.jsx"
   },
   resolve: {
-    extensions: [".js", ".ts"]
+    extensions: [".js", ".ts", ".jsx"]
   },
   output: {
     clean: true,
@@ -19,7 +19,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         loader: "babel-loader"
       },
