@@ -10,13 +10,12 @@ $font-size-S: 1rem;
     margin: 0;
 }
 
-.bg-color {
-    background-color: $bg-color;
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.greeting {
-    color: $title-color;
-    text-align: center;
-    padding: $top-bottom-spacing-20;
-    font-size: $font-size-M;
+.bg-color {
+    background-color: $bg-color;
 }

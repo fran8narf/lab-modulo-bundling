@@ -7,7 +7,10 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 export default {
   context: path.resolve(__dirname, "src"),
   entry: {
-    app: "./index.js"
+    app: "./index.ts"
+  },
+  resolve: {
+    extensions: [".js", ".ts"]
   },
   output: {
     clean: true,
@@ -29,6 +32,14 @@ export default {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|jpg|jpeg|tiff|svg|webp|gif)$/,
+        type: "asset/resource"
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader"
       }
     ]
   },
@@ -41,6 +52,7 @@ export default {
     })
   ],
   devServer: {
-    port: 2244
+    port: 2244,
+    hot: true
   },
 }
