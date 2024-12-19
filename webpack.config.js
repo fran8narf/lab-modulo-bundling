@@ -7,7 +7,10 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 export default {
   context: path.resolve(__dirname, "src"),
   entry: {
-    app: "./index.js"
+    app: "./index.ts"
+  },
+  resolve: {
+    extensions: [".js", ".ts"]
   },
   output: {
     clean: true,
