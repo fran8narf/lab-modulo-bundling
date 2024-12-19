@@ -29,6 +29,14 @@ export default {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|jpg|jpeg|tiff|svg|webp|gif)$/,
+        type: "asset/resource"
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader"
       }
     ]
   },
@@ -41,6 +49,7 @@ export default {
     })
   ],
   devServer: {
-    port: 2244
+    port: 2244,
+    hot: true
   },
 }

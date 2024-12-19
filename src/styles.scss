@@ -8,6 +8,12 @@ $font-size-L: 4rem;
     margin: 0;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .bg-color {
     background-color: $bg-color;
 }
@@ -17,4 +23,13 @@ $font-size-L: 4rem;
     text-align: center;
     padding: $top-bottom-spacing-20;
     font-size: $font-size-L;
+}
+
+nav {
+    padding: 1em 2em 0em 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
