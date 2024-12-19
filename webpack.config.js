@@ -1,8 +1,13 @@
-import HtmlWebpackPlugin from "html-webpack-plugin"
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
+import url from 'url';
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export default {
+  context: path.resolve(__dirname, "src"),
   entry: {
-    app: "./src/index.js"
+    app: "./index.js"
   },
   output: {
     clean: true,
@@ -19,12 +24,17 @@ export default {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "index.html",
       filename: "index.html",
       scriptLoading: "blocking",
       hash: true
