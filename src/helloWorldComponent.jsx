@@ -1,10 +1,10 @@
 import React from 'react'
-import "./helloWorldComponent.scss"
+import * as classes from "./helloWorldComponent.scss"
 
 export const HellowWorldComponent = () => {
   const greetingsSource = 'desde React!!'
   return(
-    <div className='bg-color'>
+    <div className={classes['bg-color']}>
       <h1>Hola Lemoncoders desde {greetingsSource}</h1>
     </div>
   )
