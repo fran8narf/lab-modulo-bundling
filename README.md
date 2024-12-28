@@ -24,4 +24,4 @@ En la rama **opcional/react+env-vars**, se encuentran los puntos opcionales del 
 
 Por último:
 - bonus/webpack-seed-sass+transpilador+TS: Es el proyecto semilla con SASS, el intérpreta de ES5+ y TS.
-- bonus/vite-seed-project: TO-BE-DONE
+- bonus/vite-seed-project: Contiene la semilla preparada para arrancar un proyecto con **Vite**.
