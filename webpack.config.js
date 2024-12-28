@@ -1,11 +1,13 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import Dotenv from 'dotenv-webpack';
+import * as dotenv from 'dotenv';
 import path from 'path';
 import url from 'url';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-const isPerformanceMode = process.env.ANALYZE;
+
+dotenv.config({ path: process.env.NODE_ENV === 'production' ? './.env.prod' : './.env.dev' });
+const isAnalyzeMode = process.env.ANALYZE === 'true';
 
 export default {
   context: path.resolve(__dirname, "src"),
@@ -53,18 +55,12 @@ export default {
       scriptLoading: "blocking",
       hash: true
     }),
-    new Dotenv({
-      path: process.env.NODE_ENV === 'production' 
-        ? './.env.prod'
-        : './.env.dev'
-    }),
-    ...(isPerformanceMode ?
-      [new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: true })]
-      : []
-    )
+    ...(isAnalyzeMode
+      ? [new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: true })]
+      : [])
   ],
   devServer: {
     port: 2244,
     hot: true
   },
-}
+};

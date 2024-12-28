@@ -9,8 +9,7 @@
     "build": "cross-env NODE_ENV=development webpack",
     "start": "cross-env NODE_ENV=development webpack serve",
     "build-prod": "cross-env NODE_ENV=production webpack",
-    "start-prod": "cross-env NODE_ENV=production webpack serve",
-    "build:perf": "cross-env ANALYZE=true webpack"
+    "start-prod": "cross-env NODE_ENV=production webpack serve"
   },
   "author": "Framirez",
   "license": "ISC",
