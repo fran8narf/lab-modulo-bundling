@@ -1,9 +1,11 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import Dotenv from 'dotenv-webpack';
 import path from 'path';
 import url from 'url';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const isPerformanceMode = process.env.ANALYZE;
 
 export default {
   context: path.resolve(__dirname, "src"),
@@ -55,7 +57,11 @@ export default {
       path: process.env.NODE_ENV === 'production' 
         ? './.env.prod'
         : './.env.dev'
-    })
+    }),
+    ...(isPerformanceMode ?
+      [new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: true })]
+      : []
+    )
   ],
   devServer: {
     port: 2244,
