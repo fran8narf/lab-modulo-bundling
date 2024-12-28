@@ -1,4 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import Dotenv from 'dotenv-webpack';
 import path from 'path';
 import url from 'url';
 
@@ -49,6 +50,11 @@ export default {
       filename: "index.html",
       scriptLoading: "blocking",
       hash: true
+    }),
+    new Dotenv({
+      path: process.env.NODE_ENV === 'production' 
+        ? './.env.prod'
+        : './.env.dev'
     })
   ],
   devServer: {
