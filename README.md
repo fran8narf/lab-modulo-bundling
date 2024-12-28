@@ -13,7 +13,7 @@ En la rama **master**, se encuentran los puntos relacionados al apartado del lab
 - Cargar el loader y configurar TS.
 - **Instalar SASS** y añadir algunos estilos usándolo.
 - Variables de entorno (*dev y prod*).
-- **Bundle analyzer** instalado y configurado para poder usarse en webpack.config.js.
+- **Bundle analyzer** instalado y configurado en la rama **Master** para poder usarse en webpack.config.js.
 -- Se ha añadido una variable **ANALYZE** para ambos entornos que se recupera dentro de *webpack.config.js* y detecta en que entorno queremos el análisis de librerías.
 
 En la rama **opcional/react+env-vars**, se encuentran los puntos opcionales del laboratorio:
