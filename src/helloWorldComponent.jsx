@@ -5,7 +5,7 @@ export const HellowWorldComponent = () => {
   const greetingsSource = 'desde React!!'
   return(
     <div className={classes.bgColor}>
-      <h1>Hola Lemoncoders desde {greetingsSource}</h1>
+      <h1>Hola Lemoncoders {greetingsSource}</h1>
     </div>
   )
 }
