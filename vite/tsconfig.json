@@ -12,7 +12,8 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "target": "ESNext",
-        "useDefineForClassFields": true
+        "useDefineForClassFields": true,
+        "jsx": "react-jsx",
     },
     "include": ["src"],
     "exclude": [
