@@ -6,6 +6,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "type-check": "tsc --noEmit",
+    "prebuild": "npm run type-check",
     "preview": "vite preview"
   },
   "keywords": [],
