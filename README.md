@@ -23,5 +23,5 @@ En la rama **opcional/react+env-vars**, se encuentran los puntos opcionales del 
 - Tener una forma de medir cuanto ocupa cada librería y nuestro código en el bundle.​
 
 Por último:
-- bonus/webpack-seed-sass+transpilador+TS: Es el proyecto semilla con SASS, el intérpreta de ES5+ y TS.
-- bonus/vite-seed-project: Contiene la semilla preparada para arrancar un proyecto con **Vite**.
+- La rama **bonus/webpack-seed-sass+transpilador+TS**: Es el proyecto semilla con SASS, el intérpreta de ES5+ y TS.
+- La **bonus/vite-seed-project**: Contiene la semilla preparada para arrancar un proyecto con **Vite**.
